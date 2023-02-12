@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./index.css";
 import BeginScherm from "./Tabs/BeginScherm";
 import ReactTypingEffect from "react-typing-effect";
-import { lale } from "./assets";
+import { hot, koala, lale, lipgloss, schildpad } from "./assets";
 import { Button } from "@material-tailwind/react";
 
 function App() {
@@ -111,7 +111,7 @@ function App() {
       ],
     },
     {
-      text: "Wie wil er gelijk aan de truffels als je 1 keer naar een smartshop wijst? (meerdere antwoorden goed)",
+      text: "Wie wil er gelijk aan de truffels als je 1 keer naar een smartshop wijst? 🍄🍄🍄 (meerdere antwoorden goed)",
       options: [
         { id: 0, text: "Lale", isCorrect: true },
         { id: 1, text: "Lalita", isCorrect: true },
@@ -158,6 +158,76 @@ function App() {
         },
       ],
     },
+    {
+      text: "Welk dier zie je hier?",
+      options: [
+        {
+          id: 0,
+          text: "🦒",
+          isCorrect: false,
+        },
+        {
+          id: 0,
+          text: "🐢",
+          isCorrect: true,
+        },
+        {
+          id: 0,
+          text: "🐼",
+          isCorrect: false,
+        },
+      ],
+    },
+    {
+      text: "WIE smeert per dag liters lipgloss op haar lippen, die ook nog eens vies afgeven op alles wat ze aanraakt, maar ontkent dit laatste tot op de dood?",
+      options: [
+        {
+          id: 0,
+          text: "Ik weet dat ik, Lale, dit zelf ben en Robin heeft altijd al gelijk gehad",
+          isCorrect: true,
+        },
+        {
+          id: 0,
+          text: "Meisje die ik ken, maar ik in ieder geval niet",
+          isCorrect: false,
+        },
+        {
+          id: 0,
+          text: "Robin",
+          isCorrect: false,
+        },
+      ],
+    },
+    {
+      text: "Welke Koala beschuldigt andere mensen onterecht van Koala activiteiten, maar is het gewoon altijd zelf?",
+      options: [
+        {
+          id: 0,
+          text: "Lale",
+          isCorrect: true,
+        },
+      ],
+    },
+    {
+      text: "Hoe veel sterren geeft Robin deze hete meid?",
+      options: [
+        {
+          id: 0,
+          text: "⭐",
+          isCorrect: false,
+        },
+        {
+          id: 0,
+          text: "⭐⭐⭐",
+          isCorrect: false,
+        },
+        {
+          id: 0,
+          text: "⭐⭐⭐⭐⭐",
+          isCorrect: true,
+        },
+      ],
+    },
   ];
 
   return (
@@ -194,6 +264,50 @@ function App() {
               <img className="rounded-xl" src={lale} alt="" />
             </div>
           )}
+          {currentQuestion == 9 && (
+            <div className="w-full flex justify-center mb-2">
+              <iframe
+                src="https://giphy.com/embed/8Ay1jiHj4iYBa"
+                width="480"
+                height="270"
+                class="giphy-embed"
+                allowFullScreen
+              ></iframe>
+            </div>
+          )}
+
+          {currentQuestion == 7 && (
+            <div className="w-full flex justify-center mb-2">
+              <iframe
+                src="https://giphy.com/embed/Btn42lfKKrOzS"
+                width="360"
+                height="240"
+                class="giphy-embed"
+              ></iframe>
+              <p></p>
+            </div>
+          )}
+          {currentQuestion == 13 && (
+            <div className="w-full flex justify-center mb-2 h-[400px]">
+              <img src={schildpad} alt="" srcset="" />
+            </div>
+          )}
+          {currentQuestion == 14 && (
+            <div className="w-full flex justify-center mb-2 h-[400px]">
+              <img src={lipgloss} alt="" srcset="" />
+            </div>
+          )}
+          {currentQuestion == 15 && (
+            <div className="w-full flex justify-center mb-2 h-[400px]">
+              <img src={koala} alt="" srcset="" />
+            </div>
+          )}
+          {currentQuestion == 16 && !showFinalResults && (
+            <div className="w-full flex justify-center mb-2 h-[400px]">
+              <img src={hot} alt="" srcset="" />
+            </div>
+          )}
+
           {!showFinalResults ? (
             <div className="card w-full flex justify-center flex-col items-center font-sans bg-white rounded-xl p-6 shadow-xl">
               <div className="w-full text-center">
