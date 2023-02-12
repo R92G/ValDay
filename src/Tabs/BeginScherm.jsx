@@ -5,7 +5,7 @@ const BeginScherm = ({ setShowGameStart }) => {
   return (
     <div>
       <div className="w-full flex justify-center font-sans">
-        <div className="flex flex-col items-center h-fit bg-white shadow-xl mx-6 p-6 rounded-xl max-w-[400px]">
+        <div className="flex flex-col items-center h-fit bg-white shadow-xl mx-6 p-6   rounded-xl max-w-[400px]">
           <div className="">
             Klagen kan ze wel als ik weer eens iets niet meer weet. Maar hoe
             veel weet ze zelf ?? <br />
