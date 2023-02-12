@@ -79,7 +79,11 @@ function App() {
       text: "Wat is Robins lievelingswijk in Amsterdam?",
       options: [
         { id: 0, text: "de Pijp", isCorrect: false },
-        { id: 1, text: "Robin heeft geen lievelingswijk!", isCorrect: true },
+        {
+          id: 1,
+          text: "Robin heeft geen lievelingswijk hoor je me?!",
+          isCorrect: true,
+        },
         { id: 2, text: "Cuba", isCorrect: false },
         { id: 3, text: "Alles met grachten", isCorrect: false },
       ],
@@ -104,6 +108,54 @@ function App() {
         { id: 1, text: "8 april", isCorrect: true },
         { id: 2, text: "9 april", isCorrect: false },
         { id: 3, text: "10 april", isCorrect: false },
+      ],
+    },
+    {
+      text: "Wie wil er gelijk aan de truffels als je 1 keer naar een smartshop wijst? (meerdere antwoorden goed)",
+      options: [
+        { id: 0, text: "Lale", isCorrect: true },
+        { id: 1, text: "Lalita", isCorrect: true },
+        { id: 2, text: "Layla", isCorrect: true },
+        { id: 3, text: "Robin", isCorrect: false },
+      ],
+    },
+    {
+      text: "Waar leven ijsberen NIET? 🐻‍❄️",
+      options: [
+        { id: 0, text: "Alaska", isCorrect: false },
+        { id: 1, text: "Rusland", isCorrect: false },
+        { id: 2, text: "Canada", isCorrect: false },
+        { id: 4, text: "Noordpool", isCorrect: false },
+        { id: 6, text: "Zuidpool", isCorrect: true },
+        { id: 5, text: "Groenland", isCorrect: false },
+      ],
+    },
+    {
+      text: "Pinguins kunnen goed zwemmen",
+      options: [
+        { id: 0, text: "Ja sgoed", isCorrect: true },
+        { id: 1, text: "Nuut", isCorrect: false },
+      ],
+    },
+    {
+      text: "Pinguins hebben unieke vocale geluiden, die ze gebruiken om met elkaar te communiceren. Sommige hebben snuif geluiden, andere brallende en andere fluitende geluiden. ",
+      options: [
+        {
+          id: 0,
+          text: "Ik weet niet wat je allemaal uit je nek loopt te lullen, maar dit is goed",
+          isCorrect: true,
+        },
+        { id: 1, text: "Nee, hou je bek", isCorrect: false },
+      ],
+    },
+    {
+      text: "Oke we dwaalden even af. Welke uitspraak past hier goed bij (BONUSVRAAG)",
+      options: [
+        {
+          id: 0,
+          text: "Dwale met Lale",
+          isCorrect: true,
+        },
       ],
     },
   ];
@@ -171,9 +223,10 @@ function App() {
               <div className="w-full text-center">
                 <h2 className="font-bold mb-2">RESULTAAT</h2>
                 <p className="font-bold text-red-500 bg-gray-300 p-12 rounded-xl mb-4">
-                  {`${score} van de ${questions.length} goed! (score = ${
-                    (score / questions.length) * 100
-                  }%)`}
+                  {`${score} van de ${questions.length} goed! (score = ${(
+                    (score / questions.length) *
+                    100
+                  ).toFixed(2)}%)`}
                 </p>
                 <h3 className="mb-2 font-bold text-pink-400">
                   SCREENSHOT OM PRIJS TE INNEN
