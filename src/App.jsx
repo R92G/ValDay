@@ -18,15 +18,19 @@ function App() {
     setShowFinalResults(false);
   };
 
-  const optionClicked = (isCorrect) => {
-    if (isCorrect) {
-      setScore(score + 1);
-    }
-    if (currentQuestion + 1 < questions.length) {
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
-      setShowFinalResults(true);
-    }
+  const optionClicked = (isCorrect, e) => {
+    e.target.style.backgroundColor = isCorrect ? "green" : "red";
+    setTimeout(() => {
+      e.target.style.backgroundColor = "";
+      if (isCorrect) {
+        setScore(score + 1);
+      }
+      if (currentQuestion + 1 < questions.length) {
+        setCurrentQuestion(currentQuestion + 1);
+      } else {
+        setShowFinalResults(true);
+      }
+    }, 2000);
   };
 
   const questions = [
@@ -321,7 +325,7 @@ function App() {
                   {questions[currentQuestion].options.map((option) => {
                     return (
                       <li
-                        onClick={() => optionClicked(option.isCorrect)}
+                        onClick={(e) => optionClicked(option.isCorrect, e)}
                         key={option.id}
                         className="bg-gray-300 p-2 rounded-xl max-w-[400px] min-w-[300px]"
                       >
