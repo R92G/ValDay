@@ -65,8 +65,8 @@ function App() {
       text: "Hoe nat is de T van Lale?",
       options: [
         { id: 0, text: "💧", isCorrect: false },
-        { id: 1, text: "💧🌊💦", isCorrect: true },
         { id: 2, text: "🌊", isCorrect: false },
+        { id: 1, text: "💧🌊💦", isCorrect: true },
         { id: 3, text: "💦", isCorrect: false },
       ],
     },
@@ -97,12 +97,12 @@ function App() {
       options: [
         { id: 0, text: "Half uur", isCorrect: false },
         { id: 1, text: "Uur", isCorrect: false },
+        { id: 3, text: "Kwartier", isCorrect: false },
         {
           id: 2,
           text: "30 seconden, maar ze zegt het pas na 10 minuten",
           isCorrect: true,
         },
-        { id: 3, text: "Kwartier", isCorrect: false },
       ],
     },
     {
