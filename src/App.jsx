@@ -158,12 +158,12 @@ function App() {
         {
           id: 0,
           text: "Geen spijt, wel de weg kwijt",
-          isCorrect: true,
+          isCorrect: false,
         },
         {
           id: 0,
           text: "Dwale met Lale",
-          isCorrect: false,
+          isCorrect: true,
         },
       ],
     },
