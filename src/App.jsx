@@ -157,8 +157,13 @@ function App() {
       options: [
         {
           id: 0,
-          text: "Dwale met Lale",
+          text: "Geen spijt, wel de weg kwijt",
           isCorrect: true,
+        },
+        {
+          id: 0,
+          text: "Dwale met Lale",
+          isCorrect: false,
         },
       ],
     },
